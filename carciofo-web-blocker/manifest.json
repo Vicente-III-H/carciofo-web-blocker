@@ -1,8 +1,8 @@
 {
     "name": "Carciofo Web Blocker",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A basic website blocker",
-    "permissions": ["tabs", "scripting"],
+    "permissions": ["tabs", "scripting", "storage"],
     "host_permissions": ["https://*/*"],
     "background": {
         "service_worker": "background.js"
