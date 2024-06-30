@@ -2,9 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>Carciofo Options</title>
+        <link rel="stylesheet" href="options-styles.css">
     </head>
 
     <body>
-        
+        <div id="options-container">
+            <div>carciofo web blocker</div>
+            <div id="list-container">
+                <div>
+                    <label for="strict-blacklist">Blacklist:</label>
+                    <textarea id="blacklist" rows="8" cols="25"></textarea>
+                </div>
+                <div>
+                    <label for="strict-blacklist">Strict Blacklist:</label>
+                    <textarea id="strict-blacklist" rows="8" cols="25"></textarea>
+                </div>
+            </div>
+            <div>
+                <button id="save-button">Save changes</button>
+            </div>
+        </div>
     </body>
 </html>
