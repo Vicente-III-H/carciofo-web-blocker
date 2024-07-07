@@ -1,11 +1,6 @@
 function getLinksFromTextArea(textarea) {
     let links = textarea.value.split("\n");
-
-    for (i = 0; i < links.length; i++) {
-        links[i] = links[i].trim();
-    };
-
-    return links;
+    return links.map(link => link.trim()).filter(link => link !== "");
 };
 
 function setTextAreaLinks(listArray) {
