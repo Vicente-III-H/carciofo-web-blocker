@@ -1,6 +1,6 @@
 {
     "name": "Carciofo Web Blocker",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "A basic website blocker",
     "permissions": ["tabs", "scripting", "storage"],
     "host_permissions": ["https://*/*"],
@@ -11,6 +11,12 @@
         "default_popup": "popup.html"
     },
     "options_page": "options/options.html",
+    "icons": {
+        "16": "icons/icon16.PNG",
+        "32": "icons/icon32.PNG",
+        "48": "icons/icon48.PNG",
+        "128": "icons/icon128.PNG"
+    },
     
     "manifest_version": 3
 }
