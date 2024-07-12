@@ -1,7 +1,7 @@
 function getLinksFromTextArea(textarea) {
     let links = textarea.value.split("\n");
     return links.map(link => link.trim()).filter(link => link !== "");
-};
+}
 
 function setTextAreaLinks(listArray) {
     let text = "";
@@ -14,6 +14,19 @@ function setTextAreaLinks(listArray) {
     return text;
 }
 
+let saveResponseTimeout = undefined;
+function startSaveResponseTimeout(responseObject) {
+    if (saveResponseTimeout !== undefined) {
+        clearTimeout(saveResponseTimeout);
+    }
+    responseObject.innerText = "Changes saved";
+
+    saveResponseTimeout = setTimeout(() => {
+        responseObject.innerText = "";
+        saveResponseTimeout = undefined;
+    }, 5000);
+}
+
 const saveOptions = () => {
     const blacklist = getLinksFromTextArea(document.querySelector("#blacklist"));
     const strictBlacklist = getLinksFromTextArea(document.querySelector("#strict-blacklist"));
@@ -23,7 +36,7 @@ const saveOptions = () => {
         "strictBlacklist": JSON.stringify(strictBlacklist)
     }, () => {
         const saveResponse = document.querySelector("#save-response");
-        saveResponse.innerText = "Changes saved"
+        startSaveResponseTimeout(saveResponse);
     });
 };
 
