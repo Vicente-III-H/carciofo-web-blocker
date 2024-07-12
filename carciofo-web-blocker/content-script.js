@@ -1,7 +1,11 @@
 function createBlocker() {
     let screenBlocker = document.createElement("div");
     screenBlocker.setAttribute("id", "carciofo-blocker");
-    screenBlocker.style.backgroundColor = "white";
+    screenBlocker.style.backgroundImage = "url(" + chrome.runtime.getURL("images/options-background.jpg") + ")";
+    screenBlocker.style.backgroundColor = "black";
+    screenBlocker.style.backgroundRepeat = "no-repeat";
+    screenBlocker.style.backgroundPosition = "center";
+    screenBlocker.style.backgroundSize = "cover";
     screenBlocker.style.position = "fixed";
     screenBlocker.style.height = "100vh";
     screenBlocker.style.width = "100vw";
@@ -14,24 +18,39 @@ function createBlocker() {
     screenBlocker.style.justifyContent = "center";
     screenBlocker.style.alignItems = "center";
 
+    let background = document.createElement("div");
+    background.style.width = "468px";
+    background.style.height = "400px";
+    background.style.backgroundColor = "rgba(66, 87, 60, 0.75)";
+    background.style.backdropFilter = "blur(5px)";
+    background.style.borderRadius = "40px";
+    background.style.boxShadow = "0px 5px 10px 10px rgba(0, 0, 0, 0.25)";
+    background.style.color = "white";
+    background.style.fontFamily = "system-ui, sans-serif";
+    background.style.overflow = "hidden";
+
+    background.style.display = "flex";
+    background.style.flexDirection = "column";
+    background.style.justifyContent = "center";
+    background.style.alignItems = "center";
+    background.style.gap = "24px";
+
     let icon = document.createElement("img");
-    icon.setAttribute("src", chrome.runtime.getURL("icon.PNG"));
+    icon.setAttribute("src", chrome.runtime.getURL("images/icon-outline.PNG"));
     icon.setAttribute("width", "250px");
     icon.setAttribute("height", "250px");
-    icon.style.width = "250px";
+    icon.style.width = "auto";
     icon.style.height = "250px";
     //icon.setAttribute("alt", "");
-    icon.style.marginBottom = "24px";
 
     let text = document.createElement("div");
-    text.innerHTML = "Make like a tree and leaf!";
-    text.style.fontFamily = "Arial, sans-serif";
-    text.style.fontWeight = "900";
-    text.style.fontSize = "28px";
-    text.style.color = "rgb(88, 171, 61)";
+    text.innerHTML = "Website has been blocked.";
+    text.style.fontWeight = "600";
+    text.style.fontSize = "32px";
 
-    screenBlocker.appendChild(icon);
-    screenBlocker.appendChild(text);
+    screenBlocker.appendChild(background);
+    background.appendChild(icon);
+    background.appendChild(text);
 
     return screenBlocker;
 }
