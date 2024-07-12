@@ -7,22 +7,29 @@
     </head>
 
     <body>
-        <div id="options-container">
-            <div>carciofo web blocker</div>
-            <div id="list-container">
-                <div>
-                    <label for="blacklist">Blacklist:</label>
-                    <textarea id="blacklist" rows="8" cols="25"></textarea>
+        <div id="background-container">
+            <div id="options-container">
+                <div id="title">
+                    <img src="../images/icon-outline.PNG" height="100px" width="100px">
+                    <div>Carciofo Web Blocker</div>
                 </div>
-                <div>
-                    <label for="strict-blacklist">Strict Blacklist:</label>
-                    <textarea id="strict-blacklist" rows="8" cols="25"></textarea>
+
+                <div id="list-container">
+                    <div class="list">
+                        <label for="blacklist">Blacklist:</label>
+                        <textarea id="blacklist" rows="8" cols="20"></textarea>
+                    </div>
+                    <div class="list">
+                        <label for="strict-blacklist">Strict Blacklist:</label>
+                        <textarea id="strict-blacklist" rows="8" cols="20"></textarea>
+                    </div>
+                </div>
+
+                <div id="button-container">
+                    <div id="save-response"></div>
+                    <button id="save-button">Save changes</button>
                 </div>
             </div>
-            <div>
-                <button id="save-button">Save changes</button>
-            </div>
-            <div id="save-response"></div>
         </div>
 
         <script src="options.js"></script>

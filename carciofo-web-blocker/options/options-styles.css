@@ -1,19 +1,116 @@
+#background-container,
+textarea,
+#save-button,
+#save-response {
+    color: white;
+    font-family: system-ui, sans-serif;
+}
+
+body,
+#background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    /* Background image from: https://www.pexels.com/photo/close-up-photography-of-leaves-with-droplets-807598/ */
+    background-image: url("../images/options-background.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
+    margin: 0px;
+}
+
+#background-container {
+    width: 85vw;
+    height: 85vh;
+    min-width: 456px;
+    overflow: auto;
+
+    background-color: rgba(66, 87, 60, 0.75);
+    backdrop-filter: blur(5px);
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
 #options-container {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 24px;
+}
+
+#title,
+#button-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#title {
+    font-size: 48px;
+    font-weight: 700;
+
+    justify-content: flex-start;
 }
 
 #list-container {
+    flex: 1;
+
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    /* Line below causes textarea resizing to flicker*/
-    /*justify-content: center;*/ 
-    gap: 24px;
+    gap: 32px;
 }
 
-#list-container div {
+.list {
+    flex: 1;
+
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+textarea,
+#save-button {
+    background-color: rgba(111, 138, 104, 0.6);
+    border-width: 0px;
+
+    font-size: 18px;
+}
+
+textarea {
+    flex: 1;
+
+    border-radius: 20px;
+    padding: 20px;
+    resize: none;
+}
+
+#button-container {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#save-button {
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 12px;
+}
+
+#save-response {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
 }
