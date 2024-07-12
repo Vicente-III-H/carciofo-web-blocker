@@ -1,6 +1,6 @@
 {
     "name": "Carciofo Web Blocker",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "description": "A basic website blocker",
 
     "permissions": ["tabs", "scripting", "storage"],
