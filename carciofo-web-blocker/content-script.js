@@ -2,7 +2,7 @@ function createBlocker() {
     let screenBlocker = document.createElement("div");
     screenBlocker.setAttribute("id", "carciofo-blocker");
     screenBlocker.style.backgroundImage = "url(" + chrome.runtime.getURL("images/options-background.jpg") + ")";
-    screenBlocker.style.backgroundColor = "black";
+    screenBlocker.style.backgroundColor = "rgb(14 26 15)";
     screenBlocker.style.backgroundRepeat = "no-repeat";
     screenBlocker.style.backgroundPosition = "center";
     screenBlocker.style.backgroundSize = "cover";
@@ -22,7 +22,7 @@ function createBlocker() {
     background.style.width = "468px";
     background.style.height = "400px";
     background.style.backgroundColor = "rgba(66, 87, 60, 0.75)";
-    background.style.backdropFilter = "blur(5px)";
+    background.style.backdropFilter = "blur(6px)";
     background.style.borderRadius = "40px";
     background.style.boxShadow = "0px 5px 10px 10px rgba(0, 0, 0, 0.25)";
     background.style.color = "white";
