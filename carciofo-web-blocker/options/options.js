@@ -19,12 +19,12 @@ function startSaveResponseTimeout(responseObject) {
     if (saveResponseTimeout !== undefined) {
         clearTimeout(saveResponseTimeout);
     }
-    responseObject.innerText = "Changes saved";
+    responseObject.classList.add("visible");
 
     saveResponseTimeout = setTimeout(() => {
-        responseObject.innerText = "";
+        responseObject.classList.remove("visible");
         saveResponseTimeout = undefined;
-    }, 5000);
+    }, 4000);
 }
 
 const saveOptions = () => {
