@@ -93,8 +93,9 @@ textarea,
 textarea {
     flex: 1;
 
+    line-height: 1.8;
     border-radius: 20px;
-    padding: 20px;
+    padding: 14px 20px 20px 20px;
     resize: none;
 }
 
