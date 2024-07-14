@@ -26,9 +26,9 @@ function linkInLists(link, blacklist, strictBlacklist) {
             }
         });
 
-        chrome.tabs.onUpdated.addListener((tabId, tabs) => {
-            if (tabs.url) {
-                const tabHostname = new URL(tabs.url);
+        chrome.tabs.onUpdated.addListener((tabId, changes, tab) => {
+            if (tab.url) {
+                const tabHostname = new URL(tab.url);
                 
                 if (linkInLists(tabHostname.href, blacklist, strictBlacklist)) {
                     chrome.scripting.executeScript({
