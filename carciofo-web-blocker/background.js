@@ -26,6 +26,12 @@ function linkInLists(link, blacklist, strictBlacklist) {
             }
         });
 
+        chrome.runtime.onMessage.addListener((message, sender) => {
+            if (message === "close-tab" && sender.tab) {
+                chrome.tabs.remove(sender.tab.id);
+            }
+        });
+
         chrome.tabs.onUpdated.addListener((tabId, changes, tab) => {
             if (tab.url) {
                 const tabHostname = new URL(tab.url);

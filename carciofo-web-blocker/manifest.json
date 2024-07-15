@@ -1,13 +1,13 @@
 {
     "name": "Carciofo Web Blocker",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "A basic website blocker",
 
     "permissions": ["tabs", "scripting", "storage"],
     "host_permissions": ["https://*/*"],
     "web_accessible_resources": [
         {
-            "resources": ["images/*"],
+            "resources": ["images/*", "content-styles.css"],
             "matches": ["https://*/*"]
         }
     ],
