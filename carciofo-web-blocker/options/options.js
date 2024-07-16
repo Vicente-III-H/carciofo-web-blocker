@@ -6,6 +6,10 @@ function getLinksFromTextArea(textarea) {
 function setTextAreaLinks(listArray) {
     let text = "";
 
+    if (listArray.length <= 0) {
+        return text;
+    }
+
     for (i = 0; i < (listArray.length - 1); i++) {
         text += listArray[i] + "\n";
     }
