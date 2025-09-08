@@ -1,5 +1,5 @@
 # Carciofo Web Blocker
-Carciofo Web Blocker is a Chrome extension that denies user access to certain websites defined by blocklists.
+Carciofo Web Blocker is a Chrome extension that blocks user access from blacklisted websites.
 
 ![Website blocked by Carciofo extension](example-images/block-example.png)
 
